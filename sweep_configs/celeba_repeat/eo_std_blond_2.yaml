@@ -1,0 +1,27 @@
+# eo_std_blond.yaml
+
+project: rep_blond_eo
+program: sweep_gridsearch.py
+method: grid
+metric:
+  name: test_balloss_cls_eo
+  goal: minimize
+parameters:
+  loss_type:
+      value: 'standard'
+  drw_ep:
+      value: 0
+  use_drw:
+      value: 0
+  grid:
+      values: ['./configs/lambdas/celeba/grid_eo_20/grid_7.csv']
+  violation_eps:
+      values: [0.1]
+  dummy:
+      values: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+  constraint:
+      value: 'eo'
+  data_label:
+      value: 'Blond_Hair'
+  data_label_name:
+      value: 'blond'

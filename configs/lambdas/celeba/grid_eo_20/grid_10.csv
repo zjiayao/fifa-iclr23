@@ -1,0 +1,9 @@
+sign,event,group_id,0
++,label=0.0,female,0.0
++,label=0.0,male,0.0
++,label=1.0,female,0.0
++,label=1.0,male,0.0
+-,label=0.0,female,0.0
+-,label=0.0,male,0.0
+-,label=1.0,female,1.3333333333333333
+-,label=1.0,male,0.0

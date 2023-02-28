@@ -1,0 +1,134 @@
+# dp_fdam.yaml
+
+project: dutch_dp_fdam
+program: sweep_gridsearch_dutch.py
+method: bayes
+metric:
+  name: test_balloss_cls_dp
+  goal: minimize
+parameters:
+  normed_linear:
+      value: 1
+  use_drw:
+      values: [0, 1]
+  loss_type:
+      value: 'fdam'
+  max_m:
+      min: 0.
+      max: 0.1
+  drw_label_only:
+      values: [0,1]
+  alpha:
+      min: 0.0
+      max: 0.01
+  d0m: 
+      min: 0.
+      max: 0.01
+  d1f:
+      min: 0.
+      max: 0.01
+  violation_eps:
+      values: [0.01, 0.05, 0.1]
+  constraint:
+      value: 'dp'
+  grid:
+      values: ['./configs/lambdas/dutch/grid_dp_100/grid_0.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_1.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_2.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_3.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_4.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_5.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_6.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_7.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_8.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_9.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_10.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_11.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_12.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_13.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_14.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_15.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_16.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_17.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_18.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_19.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_20.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_21.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_22.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_23.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_24.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_25.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_26.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_27.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_28.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_29.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_30.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_31.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_32.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_33.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_34.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_35.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_36.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_37.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_38.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_39.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_40.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_41.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_42.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_43.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_44.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_45.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_46.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_47.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_48.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_49.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_50.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_51.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_52.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_53.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_54.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_55.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_56.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_57.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_58.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_59.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_60.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_61.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_62.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_63.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_64.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_65.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_66.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_67.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_68.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_69.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_70.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_71.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_72.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_73.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_74.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_75.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_76.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_77.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_78.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_79.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_80.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_81.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_82.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_83.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_84.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_85.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_86.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_87.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_88.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_89.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_90.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_91.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_92.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_93.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_94.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_95.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_96.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_97.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_98.csv',
+ './configs/lambdas/dutch/grid_dp_100/grid_99.csv']

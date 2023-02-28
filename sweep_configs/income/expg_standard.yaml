@@ -1,0 +1,21 @@
+# expg_standard.yaml
+
+project: fixed_income_std_expg
+program: sweep_gridsearch_adult.py
+method: grid
+metric:
+  name: test_balloss_cls_dp
+  goal: minimize
+parameters:
+  loss_type:
+      value: 'standard'
+  use_drw:
+      value: 0
+  violation_eps:
+      values: [0.01, 0.05, 0.1]
+  dummy:
+      values: [0, 1, 2, 3, 4, 5]
+  constraint:
+      values: ['eo', 'dp']
+  fair_algo:
+      value: 'expgrad'

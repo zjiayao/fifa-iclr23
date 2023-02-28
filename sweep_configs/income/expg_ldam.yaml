@@ -1,0 +1,22 @@
+# expg_ldam.yaml
+
+project: fixed_income_ldam_expg
+program: sweep_gridsearch_adult.py
+method: bayes
+metric:
+  name: test_balloss_cls_dp
+  goal: minimize
+parameters:
+  use_drw:
+      values: [0, 1]
+  loss_type:
+      value: 'ldam'
+  max_m:
+      min: 0.
+      max: 0.1
+  violation_eps:
+      values: [0.01, 0.05, 0.1]
+  constraint:
+      values: ['eo', 'dp']
+  fair_algo:
+      value: 'expgrad'

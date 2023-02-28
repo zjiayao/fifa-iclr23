@@ -1,0 +1,33 @@
+# dp_ldam_blond.yaml
+
+project: fixed_blond_dp_ldam
+program: sweep_gridsearch.py
+method: bayes
+metric:
+  name: test_balloss_cls_dp
+  goal: minimize
+parameters:
+  normed_linear:
+      value: 1
+  use_drw:
+      values: [0, 1]
+  loss_type:
+      value: 'ldam'
+  max_m:
+      min: 0.
+      max: 0.1
+  grid:
+      values: [
+         './configs/lambdas/celeba/grid_dp_20/grid_9.csv',
+         './configs/lambdas/celeba/grid_dp_20/grid_11.csv',
+         './configs/lambdas/celeba/grid_dp_20/grid_13.csv',
+         './configs/lambdas/celeba/grid_dp_20/grid_15.csv'
+         ]
+  violation_eps:
+      values: [0.1]
+  constraint:
+      value: 'dp'
+  data_label:
+      value: 'Blond_Hair'
+  data_label_name:
+      value: 'blond'

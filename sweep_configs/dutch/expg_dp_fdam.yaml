@@ -1,0 +1,36 @@
+# expg_dp_fdam.yaml
+
+project: dutch_expg_dp_fdam
+program: sweep_gridsearch_dutch.py
+method: bayes
+metric:
+  name: test_balloss_cls_dp
+  goal: minimize
+parameters:
+  normed_linear:
+      value: 1
+  use_drw:
+      values: [0, 1]
+  loss_type:
+      value: 'fdam'
+  max_m:
+      min: 0.
+      max: 0.1
+  drw_label_only:
+      values: [0,1]
+  alpha:
+      min: 0.0
+      max: 0.01
+  d0m: 
+      min: 0.
+      max: 0.01
+  d1f:
+      min: 0.
+      max: 0.01
+  violation_eps:
+      values: [0.01, 0.05, 0.1]
+  constraint:
+      value: 'dp'
+  fair_algo:
+      value: 'expgrad'
+  

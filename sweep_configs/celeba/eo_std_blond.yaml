@@ -1,0 +1,46 @@
+# eo_std_blond.yaml
+
+project: fixed_blond_eo_std
+program: sweep_gridsearch.py
+method: grid
+metric:
+  name: test_balloss_cls_eo
+  goal: minimize
+parameters:
+  loss_type:
+      value: 'standard'
+  drw_ep:
+      value: 0
+  use_drw:
+      values: [0, 1]
+  drw_label_only:
+      values: [0,1]
+  grid:
+      values: ['./configs/lambdas/celeba/grid_eo_20/grid_0.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_1.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_2.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_3.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_4.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_5.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_6.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_7.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_8.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_9.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_10.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_11.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_12.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_13.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_14.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_15.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_16.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_17.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_18.csv',
+             './configs/lambdas/celeba/grid_eo_20/grid_19.csv']
+  violation_eps:
+      values: [0.01, 0.05, 0.1]
+  constraint:
+      value: 'eo'
+  data_label:
+      value: 'Blond_Hair'
+  data_label_name:
+      value: 'blond'

@@ -1,0 +1,32 @@
+# eo_ldam_blond.yaml
+
+project: fixed_blond_eo_ldam
+program: sweep_gridsearch.py
+method: bayes
+metric:
+  name: test_balloss_cls_eo
+  goal: minimize
+parameters:
+  normed_linear:
+      value: 1
+  use_drw:
+      values: [0, 1]
+  loss_type:
+      value: 'ldam'
+  max_m:
+      min: 0.
+      max: 0.01
+  grid:
+      values: [
+          './configs/lambdas/celeba_rn18_best1.csv',
+          './configs/lambdas/celeba_rn18_best2.csv',
+          './configs/lambdas/celeba_rn18_best3.csv'
+         ]
+  violation_eps:
+      values: [0.01, 0.05, 0.1]
+  constraint:
+      value: 'eo'
+  data_label:
+      value: 'Blond_Hair'
+  data_label_name:
+      value: 'blond'
