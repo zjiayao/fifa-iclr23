@@ -1,10 +1,10 @@
-# Obtaining More Generalizable Fair Classifiers on Imbalanced Datasets
+# FIFA: Making Fairness More Generalizable in Classifiers Trained on Imbalanced Data
 
-This repo contains the code to reproduce the experiments in the paper [*Obtaining More Generalizable Fair Classifiers on Imbalanced Datasets*](https://openreview.net/forum?id=zVrw4OH1Lch). 
+This repo contains the code to reproduce the experiments in the paper [*FIFA: Making Fairness More Generalizable in Classifiers Trained on Imbalanced Data*](https://openreview.net/forum?id=zVrw4OH1Lch). 
 
 ```bib
 @inproceedings{deng2023obtaining,
-    title={Obtaining More Generalizable Fair Classifiers on Imbalanced Datasets},
+    title={FIFA: Making Fairness More Generalizable in Classifiers Trained on Imbalanced Data},
     author={Zhun Deng and Jiayao Zhang and Linjun Zhang and Ting Ye and Yates Coley and Weijie J Su and James Zou},
     booktitle={International Conference on Learning Representations},
     year={2023},
